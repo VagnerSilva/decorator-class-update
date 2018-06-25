@@ -11,7 +11,8 @@ import 'reflect-metadata';
 function DecoratorClass() {
 	return (target) => {
 
-        // observe decorator method and returns a list with anything
+		// observe decorator method and returns a list with anything
+		// sent by the UpdateClass.subscriber method
 		const list = UpdateClass.watch('my-event', target.prototype);
 		// static method scientist
 		Object.defineProperty(target, 'scientist', {
@@ -25,6 +26,7 @@ function DecoratorClass() {
 
 function DecoratorMethod(options) {
 	return (target, key, property) => {
+		// Sent to class decorator
 		UpdateClass.subscribe('my-event', target, () =>  `${options} Eureka!`)
 	}
 }

@@ -32,19 +32,18 @@ export class UpdateClass {
 
     /**
      * Observe if decorator method was used and returns a list with anything
+     * sent by the UpdateClass.subscriber method
    * @param {string} event event name
    * @param {Object} target 
    * @returns {Array}
    * @example
-   * // static properties and methods
-   * const arr = Clazz.update('my-event', target)
-   * arr.forEach(f => f());
-   * // instance properties and methods
-   * const arr = Clazz.update('my-event', target.prototype)
-   * arr.forEach(f => f());
+   * const arr = Clazz.watch('my-event', target)
+   * // out [anything]
    */
     static watch(event, target) {
         const result = Reflect.getMetadata(`update:${event}`, target) || []
         return result.map(func => func());
     }
 }
+
+UpdateClass.watch()
