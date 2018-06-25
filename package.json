@@ -1,0 +1,27 @@
+{
+  "name": "decorator-class-update",
+  "version": "1.0.0",
+  "description": "Update class by decorator method",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VagnerSilva/decorator-class-update.git"
+  },
+  "keywords": [
+    "decorator",
+    "javascript",
+    "es2015",
+    "typescript",
+    "class",
+    "method"
+  ],
+  "author": "Vagner Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VagnerSilva/decorator-class-update/issues"
+  },
+  "homepage": "https://github.com/VagnerSilva/decorator-class-update#readme"
+}
