@@ -42,6 +42,6 @@ export class UpdateClass {
    */
     static watch(event, target) {
         const result = Reflect.getMetadata(`update:${event}`, target) || []
-        return result.map(func => func());
+        return result.map(func => func())[0];
     }
 }
