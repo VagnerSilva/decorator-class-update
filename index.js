@@ -45,5 +45,3 @@ export class UpdateClass {
         return result.map(func => func());
     }
 }
-
-UpdateClass.watch()
